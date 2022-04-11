@@ -1,13 +1,13 @@
 
 from flask import Response, request, Flask, jsonify, make_response
 from flask_cors import CORS
-# from Views.view import main
+from Views.view import main
 from Models.model import db
 from werkzeug.serving import WSGIRequestHandler
 
 
 app = Flask(__name__)
-# app.register_blueprint(main)
+app.register_blueprint(main)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///carrot.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'secretcarrot'
