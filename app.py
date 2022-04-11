@@ -1,7 +1,7 @@
 
 from flask import Response, request, Flask, jsonify
 from flask_cors import CORS
-# from Views.view import main
+from Views.view import main
 # from Models.model import db
 from werkzeug.serving import WSGIRequestHandler
 
