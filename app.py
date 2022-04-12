@@ -13,8 +13,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'secretcarrot'
 CORS(app)
 db.init_app(app)
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.create_all()
 
 WSGIRequestHandler.protocol_version = "HTTP/1.1"
 
